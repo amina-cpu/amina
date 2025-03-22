@@ -291,7 +291,7 @@ margin-top:40px;
   position :center;
   list-style-type: none;
 
-position:relative;/* Allow horizontal scrolling if needed */
+position:relative;
 }
 
 .project-list li {
@@ -345,7 +345,7 @@ position:relative;/* Allow horizontal scrolling if needed */
   text-decoration: underline;
 }
 
-/* Tech stack used below project */
+
 .tech-stack {
   margin-top: 10px;
   display: flex;
@@ -365,7 +365,7 @@ position:relative;/* Allow horizontal scrolling if needed */
     padding: 60px 20px;
     padding-bottom:80px;
     margin-bottom:80px;
-     /* Dark overlay for readability */
+     
     color: white;
 }
 
@@ -402,7 +402,7 @@ position:relative;/* Allow horizontal scrolling if needed */
 
 .service-card i {
     font-size: 40px;
-    color: #F0B400;/* Orange color */
+    color: #F0B400;
     margin-bottom: 15px;
 }
 
@@ -461,11 +461,11 @@ position:relative;/* Allow horizontal scrolling if needed */
 }
 .progress-container {
   display: flex;
-  flex-wrap: wrap; /* Changed from wrap to nowrap */
+  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
  
-  overflow-x: auto; /* Allow horizontal scrolling if needed */
+  overflow-x: auto; 
   padding: 10px 0;
   margin:10px;
 }
@@ -557,7 +557,7 @@ h1 {
   color: #fff;
   margin-bottom: 5px;
 }
-/* Style all font awesome icons */
+
 .fa {
   padding: 20px;
   font-size: 30px;
@@ -566,14 +566,14 @@ h1 {
   text-decoration: none;
 }
 
-/* Add a hover effect if you want */
+
 .fa:hover {
   opacity: 0.8;
 }
 
-/* Set a specific color for each brand */
 
-/* Facebook */
+
+
 .fa-facebook {
   
   color: white;
@@ -585,7 +585,7 @@ h1 {
 
   color: white;
 }
-/* Twitter */
+
 .fa-twitter {
   
   color: white;
@@ -622,7 +622,7 @@ p {
   color:white;
 }
 .header {
-  background-color: rgba(0, 0, 0, 0.2);/* Add a background color for visibility */
+  background-color: rgba(0, 0, 0, 0.2);
   color: #fff;
   padding: 10px;
 
@@ -635,7 +635,7 @@ p {
   box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
   display: flex;
  padding-left:500px;
-  gap: 20px; /* Adds spacing between menu items */
+  gap: 20px; 
 }
 h3{
   color:#fff;
@@ -646,7 +646,7 @@ h3{
   padding-right: 20px;
   margin: 0;
   display: flex;
-  gap: 20px; /* Space between list items */
+  gap: 20px; 
 }
 
 .header li {
@@ -677,12 +677,12 @@ body {
 
 .me img{
 
-  width: 150px;  /* Set your desired size */
+  width: 150px; 
   height: 150px;
-  border-radius: 50%;  /* This makes the image circular */
-  object-fit: cover;  /* This ensures the image fills the circle properly */
-  border: 3px solid #4682B4;  /* Optional: adds a border in your site's blue color */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Optional: adds a subtle shadow */
+  border-radius: 50%;  
+  object-fit: cover;  
+  border: 3px solid #4682B4;  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
   display: block;
   margin: 0 auto; 
 
@@ -691,58 +691,7 @@ body {
 
 
 
-/* Sliding text animation */
-@keyframes slide {
-  0%, 20% {
-    top: 0;
-    opacity: 1;
-  }
-  /* First text */
-  21%, 22% {
-    opacity: 0;
-  }
-  /* Pause before next text */
-  26%, 45% {
-    top: -90px;
-    opacity: 1;
-  }
-  /* Second text */
-  46%, 47% {
-    opacity: 0;
-  }
-  /* Pause */
-  51%, 70% {
-    top: -180px;
-    opacity: 1;
-  }
-  /* Third text */
-  71%, 72% {
-    opacity: 0;
-  }
-  /* Pause */
-  76%, 95% {
-    top: -270px;
-    opacity: 1;
-  }
-  /* Fourth text */
-  96%, 97% {
-    opacity: 0;
-  }
-  /* Pause before restart */
-}
-/* Typing effect */
-@keyframes typing {
-  0% {
-    left: 100%;
-  }
-  30%, 70% {
-    left: 0;
-  }
-  /* Typing completes and stays */
-  100% {
-    left: 0;
-  }
-}
+
 @keyframes animStar {
   0% { transform: translateY(0px); }
   100% { transform: translateY(-2000px); }

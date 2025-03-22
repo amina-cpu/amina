@@ -6,25 +6,28 @@ require('dotenv').config();
 
 const app = express();
 
+// Middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(express.static(path.join(__dirname, 'public')));
+// Serve static files (optional: if you keep CSS/JS/img at root)
+app.use(express.static(__dirname));
 
+// Serve the homepage
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-
+// Serve your CV (if also moved to root)
 app.get('/cveng.pdf', (req, res) => { 
     res.contentType('application/pdf');
-    res.sendFile(path.join(__dirname, 'public', 'cveng.pdf'));
+    res.sendFile(path.join(__dirname, 'cveng.pdf'));
 });
 
+// Email route
 app.post('/send-email', async (req, res) => {
     const { name, email, subject, message } = req.body;
-    
-   
+
     const transporter = nodemailer.createTransport({
         service: 'gmail', 
         auth: {
@@ -32,7 +35,6 @@ app.post('/send-email', async (req, res) => {
             pass: process.env.EMAIL_PASS  
         }
     });
-    
 
     const mailOptions = {
         from: email,
@@ -46,7 +48,7 @@ app.post('/send-email', async (req, res) => {
             <p>${message}</p>
         `
     };
-    
+
     try {
         await transporter.sendMail(mailOptions);
         res.status(200).json({ success: true, message: 'Message sent successfully!' });
