@@ -1,34 +1,30 @@
 const express = require('express');
 const path = require('path');
-const bodyParser = require('body-parser'); // Add this
-const nodemailer = require('nodemailer'); // Add this
-require('dotenv').config(); // Add this for environment variables
+const bodyParser = require('body-parser'); 
+const nodemailer = require('nodemailer');
+require('dotenv').config(); 
 
 const app = express();
 
-// Middleware for parsing JSON and form data
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Serve static files from the "public" folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Route to serve index.html explicitly
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'homepage.html'));
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// Serve the PDF file with the correct Content-Type
+
 app.get('/cveng.pdf', (req, res) => { 
     res.contentType('application/pdf');
     res.sendFile(path.join(__dirname, 'public', 'cveng.pdf'));
 });
 
-// NEW: Add route for email sending
 app.post('/send-email', async (req, res) => {
     const { name, email, subject, message } = req.body;
     
-    // Create email transporter (configure with your email service)
+   
     const transporter = nodemailer.createTransport({
         service: 'gmail', 
         auth: {
@@ -37,10 +33,10 @@ app.post('/send-email', async (req, res) => {
         }
     });
     
-    // Email content
+
     const mailOptions = {
         from: email,
-        to: process.env.EMAIL_USER, // Your email address to receive messages
+        to: process.env.EMAIL_USER, 
         subject: `Portfolio Contact: ${subject || 'New Message'}`,
         html: `
             <h3>New Message from Portfolio</h3>
