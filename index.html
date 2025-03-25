@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -13,11 +15,25 @@
 </head>
 
 <body>
-    <!-- Vue App -->
-    <div id="app">
-        <header-component></header-component>
-    </div>
-    
+  <header class="header">
+    <div class="menu-icon" id="menu-icon">&#9776;</div>
+
+    <nav class="nav">
+      <ul id="nav-list">
+        <li><a href="#i">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#cont">My Work</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#tact">Contacts</a></li>
+        <li>
+          <a href="/cveng.pdf" target="_blank">
+            <button class="resume">Resumé</button>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
 
     <div class="container" id="i">
       <div class="one">
@@ -493,6 +509,14 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+</script>
+<script>
+  const menuIcon = document.getElementById('menu-icon');
+  const navList = document.getElementById('nav-list');
+
+  menuIcon.addEventListener('click', () => {
+    navList.classList.toggle('active');
+  });
 </script>
 </body>
 </html>
