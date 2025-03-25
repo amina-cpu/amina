@@ -819,6 +819,10 @@ body {
  .ner {
  margin:50px;
 }
+.see-my-work {
+position:center;
+ margin:0px;
+}
 
  .services-container {
   display: grid;
