@@ -817,7 +817,8 @@ body {
 
  }
  .ner {
- margin:50px;
+  max-width: 600px;
+ margin:0px;
 }
 .see-my-work {
 position:center;
@@ -839,7 +840,7 @@ padding-top:100px;
  margin:0px;
   margin-left: 100px;
 }
- .services {
+.services {
 padding:0px;
 }
  .second{
@@ -852,7 +853,7 @@ padding:0px;
  
 padding:50px;
   max-width: 600px;
-
+margin:0px;
 }
 .menu-icon {
   display: block;
