@@ -217,7 +217,7 @@
 
               </p>
               <div class="project-links">
-                  <a href="#">View on GitHub</a>
+                  <a href="https://github.com/amina-cpu/laravel">View on GitHub</a>
                   
               </div>
               <div class="tech-stack">
@@ -255,7 +255,7 @@
              This is a professional photographer’s blog website built using Laravel for backend development and PHPMyAdmin for database management, with development done in Visual Studio. The site showcases photography work, provides blog posts, and allows easy content management.
             </p>
             <div class="project-links">
-                <a href="#">View on GitHub</a>
+                <a href="https://github.com/amina-cpu/blog">View on GitHub</a>
                 
             </div>
             <div class="tech-stack">
@@ -271,7 +271,7 @@
     <li><div class="mo"><div class="first">
       <h4 class="project-title">Coffeeshop Order Application</h4>
       <p class="project-description">
-        This is an e-commerce website for a women's Brand clothing, developed using Laravel for the backend and Visual Studio for development. The platform offers an intuitive shopping experience with secure payment integrations, responsive design, and easy product management.
+        CoffeeShop is a mobile application developed with Kotlin & Firebase, allowing users to order coffee and cakes online with customization options.
 
 
       </p>
@@ -375,32 +375,47 @@ document.addEventListener("mouseout", () => {
 });
 </script>
 <script>
- const circularProgress = document.querySelectorAll(".circular-progress");
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const circularProgress = document.querySelectorAll(".circular-progress");
 
-Array.from(circularProgress).forEach((progressBar) => {
-  const progressValue = progressBar.querySelector(".percentage");
-  const innerCircle = progressBar.querySelector(".inner-circle");
-  let startValue = 0,
-    endValue = Number(progressBar.getAttribute("data-percentage")),
-    speed = 50,
-    progressColor = progressBar.getAttribute("data-progress-color");
+      Array.from(circularProgress).forEach((progressBar) => {
+        const progressValue = progressBar.querySelector(".percentage");
+        const innerCircle = progressBar.querySelector(".inner-circle");
+        let startValue = 0;
+        const endValue = Number(progressBar.getAttribute("data-percentage"));
+        const speed = 50;
+        const progressColor = progressBar.getAttribute("data-progress-color");
 
-  const progress = setInterval(() => {
-    startValue++;
-    
+        const progress = setInterval(() => {
+          startValue++;
+          progressValue.textContent = `${startValue}%`;
 
-    innerCircle.style.backgroundColor = `${progressBar.getAttribute(
-      "data-inner-circle-color"
-    )}`;
+          innerCircle.style.backgroundColor = `${progressBar.getAttribute(
+            "data-inner-circle-color"
+          )}`;
 
-    progressBar.style.background = `conic-gradient(${progressColor} ${
-      startValue * 3.6
-    }deg,${progressBar.getAttribute("data-bg-color")} 0deg)`;
-    if (startValue === endValue) {
-      clearInterval(progress);
+          progressBar.style.background = `conic-gradient(${progressColor} ${
+            startValue * 3.6
+          }deg,${progressBar.getAttribute("data-bg-color")} 0deg)`;
+
+          if (startValue === endValue) {
+            clearInterval(progress);
+          }
+        }, speed);
+      });
+
+      // Stop observing after animation is triggered once
+      observer.unobserve(entry.target);
     }
-  }, speed);
-});
+  });
+}, { threshold: 0.4 }); // Trigger when 40% is visible
+
+// Start observing the skills section
+const skillsSection = document.querySelector(".skills-section");
+observer.observe(skillsSection);
+
 document.addEventListener("DOMContentLoaded", function() {
     const companies = document.querySelectorAll(".company");
     const jobTitle = document.getElementById("job-position");
