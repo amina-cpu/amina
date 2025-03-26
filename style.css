@@ -868,9 +868,7 @@ margin:0px;
 .resume{
   margin:0px;
 }
-.nav{
-  position:fixed;
-}
+
 .nav ul {
   display: none;
   flex-direction: column;
