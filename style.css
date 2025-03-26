@@ -825,13 +825,13 @@ body {
 position:center;
  margin:0px;
 margin-top: 50px;
- margin-left: 180px;
+ margin-left: 100px;
 }
 
  .services-container {
   display: grid;
   margin:10px;
-
+padding-bottom: 20px;
 }
 .one {
   font-size: 16px;
@@ -841,7 +841,7 @@ padding-top:100px;
  .skills-section {
  padding: 0px;
  margin:0px;
-  margin-left: 100px;
+  margin-left: 90px;
 }
 .services {
 padding:0px;
@@ -872,7 +872,7 @@ margin:0px;
   top: 60px;
   left: 0px;
   width: 100%;
-  padding-left:200px;
+  padding-left:180px;
   z-index: 10;
 }
 
