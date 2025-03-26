@@ -792,7 +792,7 @@ body {
   }
   .mo {
  
-    width: 400px;
+    width: 350px;
     height:700px;
     display: grid;
     margin:5px;
@@ -851,7 +851,7 @@ padding:0px;
 .contact-section {
  
  
-padding:50px;
+padding:0px;
   max-width: 600px;
 margin:0px;
 }
@@ -859,7 +859,7 @@ margin:0px;
   display: block;
 }
 .resume{
-  margin-left:0px;
+  margin:0px;
 }
 .nav ul {
   display: none;
