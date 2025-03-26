@@ -827,7 +827,7 @@ position:center;
 
  .services-container {
   display: grid;
-  margin:50px;
+  margin:10px;
 
 }
 .one {
@@ -838,7 +838,7 @@ padding-top:100px;
  .skills-section {
  padding: 0px;
  margin:0px;
-  margin-left: 100px;
+  margin-left: 50px;
 }
 .services {
 padding:0px;
@@ -869,7 +869,7 @@ margin:0px;
   top: 60px;
   left: 0px;
   width: 90%;
-  padding-left:300px;
+  padding-left:200px;
   z-index: 10;
 }
 
