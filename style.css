@@ -817,12 +817,15 @@ body {
 
  }
  .ner {
-  max-width: 600px;
- margin:0px;
+  max-width: 570px;
+ margin:10px;
+ 
 }
 .see-my-work {
 position:center;
  margin:0px;
+margin-top: 50px;
+ margin-left: 180px;
 }
 
  .services-container {
@@ -838,7 +841,7 @@ padding-top:100px;
  .skills-section {
  padding: 0px;
  margin:0px;
-  margin-left: 50px;
+  margin-left: 100px;
 }
 .services {
 padding:0px;
@@ -864,11 +867,11 @@ margin:0px;
 .nav ul {
   display: none;
   flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.2); 
+  background-color: #191970; 
   position: absolute;
   top: 60px;
   left: 0px;
-  width: 90%;
+  width: 100%;
   padding-left:200px;
   z-index: 10;
 }
