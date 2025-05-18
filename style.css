@@ -873,7 +873,7 @@ margin:0px;
   display: none;
   flex-direction: column;
   background-color: #191970; 
-  position: absolute;
+  position: absolute; 
   top: 60px;
   left: 0px;
   width: 100%;
