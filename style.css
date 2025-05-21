@@ -309,6 +309,7 @@ position:relative;
   padding-top: 0px;
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom:20px;
   position: relative;
   transition: transform 0.3s ease;
 }
@@ -809,8 +810,11 @@ body {
       margin-left: 10px;
     }
  .project-list li{
-  padding :0px;
- margin:0px;
+  padding :20px;
+ margin-top:0px;
+ margin-bottom:0px;
+ margin-left:10px;
+ margin-right:10px;
 
  }
  .project-list{
@@ -858,9 +862,9 @@ padding:0px;
 .contact-section {
  
  
-padding:0px;
+padding:20px;
   max-width: 600px;
-margin:0px;
+margin:20px;
 }
 .menu-icon {
   display: block;
@@ -874,10 +878,11 @@ margin:0px;
   flex-direction: column;
   background-color: #191970; 
   position: absolute; 
-  top: 60px;
+  top: 70px;
   left: 0px;
   width: 100%;
   padding-left:100px;
+  margin-bottom:20px;
   z-index: 10;
 }
 
@@ -916,4 +921,43 @@ margin:0px;
   .progress-container {
     gap: 10px;
   }
+}
+@media screen and (min-width: 1350px) {
+ 
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 2000px;
+  padding-top: 110px;
+  padding-left: 400px;
+  padding-right:400px;
+  padding-bottom: 80px;
+  background: #191970;
+  justify-content: space-between;
+}
+.ner {
+  max-width:1200px;
+  margin-bottom:50px;
+  margin-top:50px;
+  margin-left:300px;
+  padding-left:200px;
+}
+.skills-section {
+  width: 60%;
+  
+  margin-top: 100px;
+  
+  padding-top: 40px;
+  padding-bottom: 30px;
+  background-color:rgba(0, 0, 0, 0.2);
+  margin-left:380px; 
+  text-align: center;
+  clear: both;
+
+}
+.cont {
+ 
+ margin-left:200px;
+ margin-right:200px;
+}
 }
