@@ -222,9 +222,9 @@
   overflow: hidden;
   letter-spacing: 1px;
   text-transform: uppercase;
-  margin:00px;
-  margin-left:500px;
-  margin-right:50px;
+  margin:0px;
+  /* margin-left:500px;
+  margin-right:50px; */
 }
 
 .resume:hover {
@@ -627,7 +627,7 @@ p {
   text-decoration: none;
   font-size: 1.5rem;
 }
-header.header {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -798,7 +798,7 @@ body {
     width: 350px;
     height:700px;
     display: grid;
-    margin:5px;
+    /* margin:5px; */
   
   }
   .mo img{
@@ -863,7 +863,7 @@ padding:0px;
  
  
 padding:20px;
-  max-width: 600px;
+  max-width: 500px;
 margin:20px;
 }
 .menu-icon {
@@ -880,7 +880,7 @@ margin:20px;
   position: absolute; 
   top: 70px;
   left: 0px;
-  width: 100%;
+  width: 80%;
   padding-left:100px;
   margin-bottom:20px;
   z-index: 10;
